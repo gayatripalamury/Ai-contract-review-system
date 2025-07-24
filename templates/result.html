@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contract Review Results</title>
+</head>
+<body>
+    <h1>🧠 Contract Review for {{ filename }}</h1>
+
+    {% if results %}
+        <ul>
+            {% for item in results %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>✅ No issues found in this contract!</p>
+    {% endif %}
+
+    <br><a href="/">🔙 Upload Another</a>
+</body>
+</html>
